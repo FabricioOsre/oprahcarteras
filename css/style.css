@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Prompt', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    background-color: rgb(255, 253, 251);
+}
+a{
+    text-decoration: none;
+}
+.header{
+ display: flex;
+ width: 80%;  
+}
+.redes-s{
+    display: flex;
+    align-items: flex-start;
+    margin-left: 80%;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+.redes-s img{
+    display: flex;
+    width: 40px;
+    opacity: 40%;
+    padding: 5px;
+}
+.redes-s img:hover{
+    opacity: 85%;
+}
+/*Este es el contenedor del main*/
+/*.contenedor grid-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(200px, 1fr));
+    /*grid-template-columns: repeat(7, 1fr);*/
+   /* grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "menu-ppal menu-ppal menu-ppal menu-ppal menu-ppal menu-ppal menu-ppal"
+    "slide slide slide slide slide slide slide"
+    ".... .... filosofia filosofia filosofia .... ...."
+    "imgsecon imgsecon imgsecon imgsecon imgsecon imgsecon imgsecon"
+    "registrarme registrarme registrarme registrarme registrarme registrarme registrarme"
+    "descarga-app descarga-app descarga-app descarga-app descarga-app descarga-app descarga-app"
+    ;
+}
+*/
+.grid-container{
+    width: 100%;
+    display: grid;
+    /*grid-template-columns: repeat(autofit, minmax(200px, 1fr));*/
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, autofit);
+    grid-template-areas: 
+    "menu-ppal menu-ppal menu-ppal menu-ppal menu-ppal menu-ppal menu-ppal"
+    "slide slide slide slide slide slide slide"
+    ".... .... filosofia filosofia filosofia .... ...."
+    "imgsecon imgsecon imgsecon imgsecon imgsecon imgsecon imgsecon"
+    ".... .... parrafo parrafo parrafo .... ...."
+    "registrarme registrarme registrarme registrarme registrarme registrarme registrarme"
+    ".... .... descarga-app descarga-app descarga-app .... ...."
+    ;
+}
+.menu-ppal{
+    grid-area: menu-ppal;
+    width: 100%;
+    height: 6%;
+}
+.container-fluid{
+    width: 100%;
+    height: 100%
+}
+.bg-body-tertiary{
+    --bs-bg-opacity: 0;
+}
+.slide{
+    grid-area: slide;
+    background-color: rgb(250, 247, 242);
+}
+.texto-slide h1{
+    text-align: center;
+    color: rgb(71, 71, 69);
+    text-shadow: 2px 1px 2px rgb(34, 29, 14);
+    font-size: clamp(1em, 5vw, 5em);
+
+}
+.filosofia{
+    grid-area: filosofia;
+    width: 90%;
+    text-align: center;
+    padding: 40px;
+}
+.imgsecon{
+    grid-area: imgsecon;
+}
+.parrafo{
+    grid-area: parrafo;
+    width: 90%;
+    text-align: center;
+    padding: 40px;
+}
+.registrarme{
+    grid-area: registrarme;
+    text-align: center;
+    padding: 20px;
+}
+.btn-primary{
+    --bs-btn-bg: #cbc98b;
+    --bs-btn-color: #333333;
+    --bs-btn-border-color: #b0b778;
+    --bs-btn-hover-bg: #918b5d;
+    --bs-btn-active-bg: #949561;
+    --bs-btn-hover-border-color: #afafaf;
+    --bs-btn-active-border-color: #ffffff;
+}
+.descarga-app{
+    grid-area: descarga-app;
+    display: grid;
+    justify-items: center;
+}
+.descarga-app img{
+    width: 20%;
+    display:grid;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+/*Este es el contenedor del footer*/
+.contenedor2{
+    width: 100%;
+    height: 30vh;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    ".... .... oprah-foo oprah-foo oprah-foo .... ...."
+    "menu-ppal2 menu-ppal2 menu-ppal2 menu-ppal2 menu-ppal2 menu-ppal2 menu-ppal2"
+    "seguinos seguinos seguinos seguinos seguinos seguinos seguinos"
+    "redes_foo redes_foo redes_foo redes_foo redes_foo redes_foo redes_foo"
+    ".... .... datos_foo datos_foo datos_foo .... ...."
+    ;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+.nav-footer li{
+    width: 100px;
+    display: flex;
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    border-left: 1px solid ;
+}
+.nav-footer ul{
+    display: flex;
+    justify-content: center;
+}
+.oprah-foo{
+    grid-area: oprah-foo;
+    text-align: center;
+    padding-top: 20px;
+}
+.descarga-app{
+    grid-area: main;
+}
+.menu-ppal2{
+    grid-area: menu-ppal2;
+}
+.seguinos{
+    grid-area: seguinos;
+    display: flex;
+    justify-content: center; 
+    color: rgb(87, 85, 85);  
+}
+.redes img{
+    width: 10%;
+    padding-right: 5px;
+    padding-top: 10px ;
+}
+.redes a{
+    height: 100%;
+    display: inline-block;
+}
+.redes_foo{
+    grid-area:redes_foo;
+    background-color: rgba(112, 67, 105, 0.466);
+}
+.redes_foo{
+text-align: center;
+}
+.datos_foo{
+    grid-area: datos_foo;
+}
+.datos_foo p{
+    text-align: center;
+    font-size: 15px;
+    padding-top: 15px;
+}
+/*para pagina de contacto*/
+.card-group{
+    gap: 10px;
+    padding: 10px;
+}
+.card img{
+    transition: 0.5s ease-out;
+}
+.card img:hover {
+    width: 300px;
+    opacity: 1;
+    filter: contrast(130%);
+  }
+
+/*para pagina diseñadora*/
+.tarjeta{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: stretch;
+    height: 100%;
+    color: rgb(87, 85, 85);
+    }
+    .daniela{
+        display: flex;
+        width: 90%;
+    }
+    .daniela img{
+        width: 30%;
+        height:fit-content;
+    }
+    .daniela h3{
+        padding-top: 20px;
+    }
